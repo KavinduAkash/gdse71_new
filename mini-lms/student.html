@@ -57,7 +57,7 @@
         <th scope="col">Address</th>
     </tr>
     </thead>
-    <tbody>
+    <tbody id="student-tbody">
     </tbody>
 </table>
 
@@ -72,6 +72,15 @@
         let lname = $('#lname').val();
         let address = $('#address').val();
         console.log(`fname: ${fname}, lname: ${lname}, address: ${address}`);
+
+        let data = `<tr>
+            <td>${1}</td>
+            <td>${fname}</td>
+            <td>${lname}</td>
+            <td>${address}</td>
+        </tr>`
+
+        $('#student-tbody').append(data);
     });
 
 </script>
