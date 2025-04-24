@@ -3,10 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Events</title>
+
+    <style>
+
+        div {
+            width: 300px;
+            aspect-ratio: 1/1;
+            background-color: lightblue;
+            border: 5px solid blue;
+        }
+
+    </style>
+
 </head>
 <body>
 
 <button>Click Me!</button>
+
+<div></div>
 
 <script src="lib/jquery-3.7.1.min.js"></script>
 
@@ -34,6 +48,19 @@
         console.log("MouseDown!");
     });
 
+    let div_element = document.getElementsByTagName('div')[0];
+
+    div_element.addEventListener('mouseover', function () {
+        console.log("MouseOver!");
+    })
+
+    div_element.addEventListener('mouseout', function () {
+        console.log("MouseOut!");
+    })
+
+    div_element.addEventListener('mousemove', function () {
+        console.log("MouseMove!");
+    })
 
 </script>
 
