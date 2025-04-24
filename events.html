@@ -20,7 +20,7 @@
 
 <button>Click Me!</button>
 
-<div></div>
+<!--<div></div>-->
 
 <input type="text" id="myinput">
 
@@ -49,32 +49,36 @@
         console.log("MouseDown!");
     });
 
-    let div_element = document.getElementsByTagName('div')[0];
-
-    div_element.addEventListener('mouseover', function () {
-        console.log("MouseOver!");
-    })
-
-    div_element.addEventListener('mouseout', function () {
-        console.log("MouseOut!");
-    })
-
-    div_element.addEventListener('mousemove', function () {
-        console.log("MouseMove!");
-    })
+    // let div_element = document.getElementsByTagName('div')[0];
+    //
+    // div_element.addEventListener('mouseover', function () {
+    //     console.log("MouseOver!");
+    // })
+    //
+    // div_element.addEventListener('mouseout', function () {
+    //     console.log("MouseOut!");
+    // })
+    //
+    // div_element.addEventListener('mousemove', function () {
+    //     console.log("MouseMove!");
+    // })
 
     let input = document.getElementById('myinput');
 
-    input.addEventListener('keydown', function () {
-        console.log("KeyDown!");
-    })
+    // input.addEventListener('keydown', function () {
+    //     console.log("KeyDown!");
+    // })
+    //
+    // input.addEventListener('keyup', function () {
+    //     console.log("KeyUp!");
+    // })
+    //
+    // input.addEventListener('keypress', function () {
+    //     console.log("KeyPress!");
+    // })
 
-    input.addEventListener('keyup', function () {
-        console.log("KeyUp!");
-    })
-
-    input.addEventListener('keypress', function () {
-        console.log("KeyPress!");
+    input.addEventListener('input', function (e) {
+        console.log("Input Event: " + e.target.value);
     })
 
 </script>
