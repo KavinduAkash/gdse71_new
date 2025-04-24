@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Events</title>
+</head>
+<body>
+
+<button>Click Me!</button>
+
+<script src="lib/jquery-3.7.1.min.js"></script>
+
+<script>
+
+    let btn = document.getElementsByTagName('button')[0];
+
+    btn.addEventListener('click', function () {
+        console.log("Clicked!");
+    });
+
+    // btn.addEventListener('click', () => {
+    //     console.log("Clicked!");
+    // });
+
+    btn.addEventListener('dblclick', function () {
+        console.log("Double Clicked!");
+    });
+
+    btn.addEventListener('mouseup', function () {
+        console.log("MouseUp!");
+    });
+
+    btn.addEventListener('mousedown', function () {
+        console.log("MouseDown!");
+    });
+
+
+</script>
+
+</body>
+</html>
