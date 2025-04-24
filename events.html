@@ -19,6 +19,7 @@
 <body>
 
 <button>Click Me!</button>
+<button>Reset</button>
 
 <!--<div></div>-->
 
@@ -31,25 +32,25 @@
 
     let btn = document.getElementsByTagName('button')[0];
 
-    btn.addEventListener('click', function () {
-        console.log("Clicked!");
-    });
+    // btn.addEventListener('click', function () {
+    //     console.log("Clicked!");
+    // });
 
     // btn.addEventListener('click', () => {
     //     console.log("Clicked!");
     // });
 
-    btn.addEventListener('dblclick', function () {
-        console.log("Double Clicked!");
-    });
-
-    btn.addEventListener('mouseup', function () {
-        console.log("MouseUp!");
-    });
-
-    btn.addEventListener('mousedown', function () {
-        console.log("MouseDown!");
-    });
+    // btn.addEventListener('dblclick', function () {
+    //     console.log("Double Clicked!");
+    // });
+    //
+    // btn.addEventListener('mouseup', function () {
+    //     console.log("MouseUp!");
+    // });
+    //
+    // btn.addEventListener('mousedown', function () {
+    //     console.log("MouseDown!");
+    // });
 
     // let div_element = document.getElementsByTagName('div')[0];
     //
@@ -79,10 +80,20 @@
     //     console.log("KeyPress!");
     // })
 
-    input.addEventListener('input', function (e) {
-        console.log("Input Event: " + e.target.value);
-        document.getElementsByTagName('h1')[0].innerText = e.target.value;
-    })
+    // input.addEventListener('input', function (e) {
+    //     console.log("Input Event: " + e.target.value);
+    //     document.getElementsByTagName('h1')[0].innerText = e.target.value;
+    // })
+
+    btn.addEventListener('click', function () {
+        let value = document.getElementById('myinput').value;
+        console.log(value);
+    });
+
+    let reset_btn = document.getElementsByTagName('button')[1];
+    reset_btn.addEventListener('click', function () {
+        document.getElementById('myinput').value = "";
+    });
 
 </script>
 
