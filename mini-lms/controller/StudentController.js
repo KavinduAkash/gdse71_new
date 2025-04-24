@@ -1,4 +1,5 @@
-import {students_db} from "../db/db.js";
+import {students_db, courses_db} from "../db/db.js";
+import StudentModel from "../model/StudentModel.js";
 
 // load student records
 function loadStudents() {
@@ -38,11 +39,13 @@ $('#student_save').on('click', function(){
     } else {
 
 
-        let student_data = {
-            fname: fname,
-            lname: lname,
-            address: address
-        };
+        // let student_data = {
+        //     fname: fname,
+        //     lname: lname,
+        //     address: address
+        // };
+
+        let student_data = new StudentModel(fname, lname, address);
 
         students_db.push(student_data);
 
