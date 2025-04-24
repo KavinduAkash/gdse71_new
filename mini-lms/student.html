@@ -41,8 +41,8 @@
                 <label for="address" class="form-label">Address</label>
                 <textarea class="form-control" id="address" style="height: 100px"></textarea>
             </div>
-            <button type="button" class="btn btn-primary">Save</button>
-            <button type="button" class="btn btn-primary">Reset</button>
+            <button id="student_save" type="button" class="btn btn-primary">Save</button>
+            <button id="student_reset" type="button" class="btn btn-primary">Reset</button>
         </form>
     </div>
 </div>
@@ -61,7 +61,20 @@
     </tbody>
 </table>
 
-<script src="lib/jquery-3.7.1.min.js"></script>
+<script src="../lib/jquery-3.7.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+
+<script>
+
+    $('#student_save').on('click', function(){
+       // let fname = document.getElementById('fname').value;
+        let fname = $('#fname').val();
+        let lname = $('#lname').val();
+        let address = $('#address').val();
+        console.log(`fname: ${fname}, lname: ${lname}, address: ${address}`);
+    });
+
+</script>
+
 </body>
 </html>
