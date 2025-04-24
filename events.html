@@ -18,14 +18,20 @@
 </head>
 <body>
 
-<button>Click Me!</button>
-<button>Reset</button>
+<!--<button>Click Me!</button>-->
+<!--<button>Reset</button>-->
 
 <!--<div></div>-->
 
-<input type="text" id="myinput">
+<!--<input type="text" id="myinput">-->
 
-<h1></h1>
+<!--<h1></h1>-->
+
+
+
+<button id="ok">OK</button>
+
+<div id="box"></div>
 
 <script src="lib/jquery-3.7.1.min.js"></script>
 <script>
@@ -85,15 +91,37 @@
     //     document.getElementsByTagName('h1')[0].innerText = e.target.value;
     // })
 
-    btn.addEventListener('click', function () {
-        let value = document.getElementById('myinput').value;
-        console.log(value);
-    });
+    // btn.addEventListener('click', function () {
+    //     let value = document.getElementById('myinput').value;
+    //     console.log(value);
+    // });
+    //
+    // let reset_btn = document.getElementsByTagName('button')[1];
+    // reset_btn.addEventListener('click', function () {
+    //     document.getElementById('myinput').value = "";
+    // });
 
-    let reset_btn = document.getElementsByTagName('button')[1];
-    reset_btn.addEventListener('click', function () {
-        document.getElementById('myinput').value = "";
-    });
+    //////////////////////////////////////////////////////////
+
+    $("#ok").on('click', function() {
+        console.log('clicked ok!');
+    })
+
+    $("#ok").on('dblclick', function() {
+        console.log('clicked dbl ok!');
+    })
+
+    $("#ok").on('mousedown', function() {
+        console.log('clicked mousedown!');
+    })
+
+    $("#ok").on('mouseup', function() {
+        console.log('mouseup!');
+    })
+
+    $("#box").on('mousemove', function() {
+        console.log('mouse_move!');
+    })
 
 </script>
 
