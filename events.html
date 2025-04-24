@@ -22,8 +22,9 @@
 
 <div></div>
 
-<script src="lib/jquery-3.7.1.min.js"></script>
+<input type="text" id="myinput">
 
+<script src="lib/jquery-3.7.1.min.js"></script>
 <script>
 
     let btn = document.getElementsByTagName('button')[0];
@@ -60,6 +61,16 @@
 
     div_element.addEventListener('mousemove', function () {
         console.log("MouseMove!");
+    })
+
+    let input = document.getElementById('myinput');
+
+    input.addEventListener('keydown', function () {
+        console.log("KeyDown!");
+    })
+
+    input.addEventListener('keyup', function () {
+        console.log("KeyUp!");
     })
 
 </script>
