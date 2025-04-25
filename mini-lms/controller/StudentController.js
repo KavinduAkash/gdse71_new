@@ -62,3 +62,18 @@ $('#student_save').on('click', function(){
         });
     }
 });
+
+$("#student-tbody").on('click', 'tr', function(){
+    let idx = $(this).index();
+    console.log(idx);
+    let obj = students_db[idx];
+    console.log(obj);
+
+    let fname = obj.fname;
+    let lname = obj.lname;
+    let address = obj.address;
+
+    $("#fname").val(fname);
+    $("#lname").val(lname);
+    $("#address").val(address);
+});

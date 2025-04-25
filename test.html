@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<button id="add">
+    add new
+</button>
+
+<ol id="list">
+    <li>Test1</li>
+    <li>Test2</li>
+</ol>
+
+<script src="lib/jquery-3.7.1.min.js"></script>
+<script>
+
+    $('#add').on('click', function () {
+        let new_li = '<li>Test3</li>';
+        $('#list').append(new_li);
+    })
+
+    // $('li').eq(0).on('click', function () {
+    //     console.log("I'm Test1");
+    // })
+    // $('li').eq(1).on('click', function () {
+    //     console.log("I'm Test2");
+    // })
+    // $('li').eq(2).on('click', function () {
+    //     console.log("I'm Test3");
+    // })
+
+    $("#list").on('click', 'li', function () {
+        console.log("Clicked!");
+        let idx = $(this).index();
+        console.log(idx);
+    })
+
+
+</script>
+</body>
+</html>
